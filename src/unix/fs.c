@@ -71,7 +71,7 @@
 # include <sys/socket.h>
 #endif
 
-#if HAVE_PREADV || defined(__APPLE__)
+#if HAVE_PREADV || defined(__APPLE__) || defined(__ANDROID__)
 # include <sys/uio.h>
 #endif
 
