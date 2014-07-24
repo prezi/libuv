@@ -558,7 +558,7 @@ static int interpretAddr(struct nlmsghdr *p_hdr, struct ifaddrs **p_resultList, 
     {
         unsigned l_maxPrefix = (l_entry->ifa_addr->sa_family == AF_INET ? 32 : 128);
         unsigned l_prefix = (l_info->ifa_prefixlen > l_maxPrefix ? l_maxPrefix : l_info->ifa_prefixlen);
-        char l_mask[16] = {0};
+        unsigned char l_mask[16] = {0};
         unsigned i;
         for(i=0; i<(l_prefix/8); ++i)
         {
